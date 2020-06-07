@@ -1,6 +1,6 @@
 # Zed Shaws
 
-# Python 3 The Hard Way
+**Python 3 The Hard Way**
 
 This repo is a collection of commits for problems throughout the book
 
