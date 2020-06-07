@@ -7,3 +7,5 @@
 
 # if elif else
 # x in range(1, 10) returns boolean
+
+# for X in {arr or range} is a loop
