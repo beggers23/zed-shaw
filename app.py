@@ -1,23 +1,33 @@
-# Exercise 18
+from sys import argv
 
-def print_two(*args):
-    arg1, arg2 = args
-    print(f"arg1: {arg1}, arg2: {arg2}")
+script, input_file = argv
 
 
-def print_two_again(arg1, arg2):
-    print(f"arg1: {arg1}, arg2: {arg2}")
+def print_all(f):
+    print(f.read())
 
 
-def print_one(arg):
-    print(f"arg: {arg}")
+def rewind(f):
+    f.seek(0)
 
 
-def print_none():
-    print("nonthing")
+def print_a_line(line_count, f):
+    print(line_count, f.readline())
 
 
-print_two("Zed", "Shaw")
-print_two_again("B", "Eggs")
-print_one("First!")
-print_none()
+current_file = open(input_file)
+
+print("First let's print the whole file:\n")
+
+print_all(current_file)
+
+print("Now lets rewind, kind of like a tape")
+
+rewind(current_file)
+
+print("Lets print three lines")
+
+curr_line = 1
+print_a_line(curr_line, current_file)
+print_a_line(curr_line + 1, current_file)
+print_a_line(curr_line + 2, current_file)
