@@ -1,33 +1,27 @@
-from sys import argv
-
-script, input_file = argv
-
-
-def print_all(f):
-    print(f.read())
+def add(a, b):
+    return a + b
 
 
-def rewind(f):
-    f.seek(0)
+def subtract(a, b):
+    return a - b
 
 
-def print_a_line(line_count, f):
-    print(line_count, f.readline())
+def multiply(a, b):
+    return a * b
 
 
-current_file = open(input_file)
+def divide(a, b):
+    return a / b
 
-print("First let's print the whole file:\n")
 
-print_all(current_file)
+age = add(30, 5)
+height = subtract(74, 4)
+weight = multiply(90, 2)
+iq = divide(100, 2)
 
-print("Now lets rewind, kind of like a tape")
+print(f"Age: {age}\nHeight: {height}\nWeight: {weight}\nIQ: {iq}")
 
-rewind(current_file)
-
-print("Lets print three lines")
-
-curr_line = 1
-print_a_line(curr_line, current_file)
-print_a_line(curr_line + 1, current_file)
-print_a_line(curr_line + 2, current_file)
+what = add(age, subtract(height, multiply(weight, divide(iq, 2))))
+form = (30 + (74 - (90 * (100 / 2))))
+print(f"What? {what}")
+print(f"Form? {form}")
