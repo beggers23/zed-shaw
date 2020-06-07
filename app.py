@@ -16,18 +16,23 @@ from os.path import exists
 # last line finishes it
 
 # Exercise 17
+# script, from_file, to_file = argv
+
+# print(f"Copying from {from_file} to {to_file}")
+
+# in_file = open(from_file).read()
+
+# print(f"Theinput file is {len(in_file)} bytes long")
+
+# print(f"Does the output file exist? {exists(to_file)}")
+# print("Ready, hit RETURN to continue, CTRL-C to abort")
+# input()
+
+# out_file = open(to_file, "w").write(in_file)
+
+# print("Alright, all done")
+
+# Extra credit - make this one line of code
+
 script, from_file, to_file = argv
-
-print(f"Copying from {from_file} to {to_file}")
-
-in_file = open(from_file).read()
-
-print(f"Theinput file is {len(in_file)} bytes long")
-
-print(f"Does the output file exist? {exists(to_file)}")
-print("Ready, hit RETURN to continue, CTRL-C to abort")
-input()
-
-out_file = open(to_file, "w").write(in_file)
-
-print("Alright, all done")
+open(to_file, "w").write(open(from_file).read())
