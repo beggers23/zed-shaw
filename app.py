@@ -1,38 +1,23 @@
-from sys import argv
-from os.path import exists
-# script is the file being called
-# each one after is the available arguement passed
-# script, butts, second, third = argv
-# You can redefine first to butts and have that variable defined
-# Open uses a string to find the filename. Can hard code extension
-# txt = open(f"{filename}.txt")
-# print(txt.read())
+# Exercise 18
 
-# target = open(filename, "w")
-# "w" = write "r" = read "a" = append
-# target.truncate()
-# target.write("text")
-# target.close()
-# last line finishes it
+def print_two(*args):
+    arg1, arg2 = args
+    print(f"arg1: {arg1}, arg2: {arg2}")
 
-# Exercise 17
-# script, from_file, to_file = argv
 
-# print(f"Copying from {from_file} to {to_file}")
+def print_two_again(arg1, arg2):
+    print(f"arg1: {arg1}, arg2: {arg2}")
 
-# in_file = open(from_file).read()
 
-# print(f"Theinput file is {len(in_file)} bytes long")
+def print_one(arg):
+    print(f"arg: {arg}")
 
-# print(f"Does the output file exist? {exists(to_file)}")
-# print("Ready, hit RETURN to continue, CTRL-C to abort")
-# input()
 
-# out_file = open(to_file, "w").write(in_file)
+def print_none():
+    print("nonthing")
 
-# print("Alright, all done")
 
-# Extra credit - make this one line of code
-
-script, from_file, to_file = argv
-open(to_file, "w").write(open(from_file).read())
+print_two("Zed", "Shaw")
+print_two_again("B", "Eggs")
+print_one("First!")
+print_none()
