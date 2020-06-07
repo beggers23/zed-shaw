@@ -4,3 +4,5 @@
 # writes variable into new file
 # write_file = open(out_file, "w").write(read_file)
 # print(0b1011010) # Will just print the binary value ("Z")
+
+# if elif else

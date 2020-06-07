@@ -1,23 +1,31 @@
-# Guesses in comments
-print("1", True and True)  # True
-print("2", False and True)  # False
-print("3", 1 == 1 and 2 == 1)  # False
-print("4", "test" == "test")  # True
-print("5", 1 == 1 or 2 != 1)  # True
-print("6", True and 1 == 1)  # True
-print("7", False and 0 != 0)  # False
-print(True or 1 == 1)  # True
-print("test" == "testing")  # False
-print(1 != 0 and 2 == 1)  # False
-print("test" != "testing")  # True
-print("12", "test" == 1)  # False
-print(not (True and False))  # True
-print("curious now")
-print(not (1 == 1 and 0 != 1))  # False
-print(not (10 == 1 or 1000 == 1000))  # False
-print(not (1 != 10 or 3 == 4))  # False
-print(not ("testing" == "testing" and "Zed" == "Cool Guy"))  # True
-print("harder still")
-print(1 == 1 and (not("testing" == 1 or 1 == 0)))  # True
-print("chunky" == "bacon" and (not (3 == 4 or 3 == 3)))  # False
-print(3 == 3 and (not ("testing" == "testing" or "Python" == "Fun")))  # False
+print("""You enter a dark room with two doors.
+2 Do you go through door #1 or door #2?""")
+
+door = input("> ")
+
+if door == "1":
+    print("There is a giant bear here eating a cheese cake")
+    print("What do you do?")
+    print("1. Take the cake")
+    print("2. Scream at the bear")
+
+    bear = input("> ")
+    if bear == "1":
+        print("The bear eats your face off")
+    elif bear == "2":
+        print("The bear eats your legs off")
+    else:
+        print(f"Well, doing {bear} is probably better")
+        print("You're free!")
+elif door == "2":
+    print("You stare into the endless abyss at Cthulhu's retina.")
+    print("1. Blueberries.")
+    print("2. Yellow jacket clothespins.")
+    print("3. Understanding revolvers yelling melodies.")
+    insanity = input("> ")
+    if insanity == "1" or insanity == "2":
+        print("Your body survives powered by a mind of jello.")
+    else:
+        print("The insanity rots your eyes to muk")
+else:
+    print("You stumble around and fall on a knife and die. Good job!")
