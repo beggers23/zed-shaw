@@ -1,90 +1,23 @@
-from sys import argv
-
-# print("How old are you?", end=' ')
-# age = input()
-# print("How tall are you?", end=' ')
-# height = input()
-# print("How much do you weigh?", end=' ')
-# weight = input()
-
-# print(f"So, you're {age} old, {height} tall and {weight} heavy.")
-
-# script, filename = argv
-
-# txt = open(filename)
-
-# print("Here's your file {filename}:")
-# print(txt.read())
-
-print("Type the filename again:")
-# Good shit man
-print(open(input("> ")).read())
-
-print('Let\'s practice everything.')
-print('You\'d need to know \'bout escapes with \\ that do \n newlines and \t tabs.')
-
-poem = """
-\tThe lovely world
-with logic so firmly planted
-cannot discern \n the needs of love
-nor comprehend passion from intuition
-and requires an explanation
-\n\t\twhere there is none.
-"""
-print("--------------")
-print(poem)
-print("--------------")
-five = 10 - 2 + 3 - 6
-print(f"This should be five: {five}")
-
-
-def secret_formula(started):
-    jelly_beans = started * 500
-    jars = jelly_beans / 1000
-    crates = jars / 100
-    return jelly_beans, jars, crates
-
-
-# Must assign all values that are returned from function
-start_point = 10000
-beans, jars, crates = secret_formula(start_point)
-
-# remember that this is another way to format a string
-print("With a starting point of: {}".format(start_point))
-
-# it's just like with an f"" string
-print(
-    f"We'd have {beans} beans, {jars} jars, and {crates} crates.")
-
-start_point = start_point / 10
-
-print("We can also do that this way:")
-formula = secret_formula(start_point)
-# this is an easy way to apply a list to a format string
-print("We'd have {} beans, {} jars, and {} crates.".format(*formula))
-
-people = 20
-cats = 30
-dogs = 15
-
-if (people < cats):
-    print("Too many cats! The world is doomed!")
-
-if people < cats:
-    print("Not many cats! The world is saved!")
-
-if people < dogs:
-    print("The world is drooled on!")
-
-if people > dogs:
-    print("The world is dry!")
-
-dogs += 5
-if people >= dogs:
-    print("People are greater than or equal to dogs.")
-
-if people <= dogs:
-    print("People are less than or equal to dogs.")
-
-if people == dogs:
-    print("People are dogs.")
+# Guesses in comments
+print("1", True and True)  # True
+print("2", False and True)  # False
+print("3", 1 == 1 and 2 == 1)  # False
+print("4", "test" == "test")  # True
+print("5", 1 == 1 or 2 != 1)  # True
+print("6", True and 1 == 1)  # True
+print("7", False and 0 != 0)  # False
+print(True or 1 == 1)  # True
+print("test" == "testing")  # False
+print(1 != 0 and 2 == 1)  # False
+print("test" != "testing")  # True
+print("12", "test" == 1)  # False
+print(not (True and False))  # True
+print("curious now")
+print(not (1 == 1 and 0 != 1))  # False
+print(not (10 == 1 or 1000 == 1000))  # False
+print(not (1 != 10 or 3 == 4))  # False
+print(not ("testing" == "testing" and "Zed" == "Cool Guy"))  # True
+print("harder still")
+print(1 == 1 and (not("testing" == 1 or 1 == 0)))  # True
+print("chunky" == "bacon" and (not (3 == 4 or 3 == 3)))  # False
+print(3 == 3 and (not ("testing" == "testing" or "Python" == "Fun")))  # False
