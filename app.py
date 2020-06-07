@@ -1,36 +1,28 @@
-print("Let's practice everything")
-print('You\'d need to know \'bout escapes with \\ that do: ')
-print('\n new lines and \t tabs')
-
-poem = """
-\t The lovely world
-with logic so firmly planted
-cannot discern \n the needs of love
-nor comprehend passion from intuition
-and requires an explaination
-\n\t\twhere there is none.
-"""
-
-print("-------------")
-print(poem)
-print("-------------")
-
-five = 10 - 2 + 3 - 6
-print(f"This should be five: {five}")
+def break_words(stuff):
+    return stuff.split(" ")
 
 
-def secret_formula(started):
-    jelly_beans = started * 500
-    jars = jelly_beans / 1000
-    crates = jars / 100
-    return jelly_beans, jars, crates
+def sort_words(words):
+    return sorted(words)
 
 
-start_point = 1000
-formula = secret_formula(start_point)
-# beans, jars, crates = secret_formula(start_point)
-# print(f"We'd have {beans} beans, {jars} jars, and {crates} crates")
+def print_first_word(words):
+    """Prints first word after popping it off."""
+    print(words.pop(0))
 
-# Additional way to format a string
-print("With a starting point of: {}".format(start_point))
-print("We'd have {} beans, {} jars, and {} crates".format(*formula))
+
+def print_last_word(words):
+    print(words.pop(-1))
+
+
+def sort_sentance(sentence):
+    return sort_words(break_words(sentence))
+
+
+def print_first_and_last(sentence, sort=False):
+    words = break_words(sentence)
+    if(sort):
+        words = sort_words(words)
+
+    print_first_word(words)
+    print_last_word(words)
