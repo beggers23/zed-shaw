@@ -6,3 +6,4 @@
 # print(0b1011010) # Will just print the binary value ("Z")
 
 # if elif else
+# x in range(1, 10) returns boolean
