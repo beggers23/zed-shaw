@@ -1,25 +1,36 @@
-import sys
-script, input_encoding, error = sys.argv
+print("Let's practice everything")
+print('You\'d need to know \'bout escapes with \\ that do: ')
+print('\n new lines and \t tabs')
+
+poem = """
+\t The lovely world
+with logic so firmly planted
+cannot discern \n the needs of love
+nor comprehend passion from intuition
+and requires an explaination
+\n\t\twhere there is none.
+"""
+
+print("-------------")
+print(poem)
+print("-------------")
+
+five = 10 - 2 + 3 - 6
+print(f"This should be five: {five}")
 
 
-def main(language_file, encoding, errors):
-    line = language_file.readline()
-    # Will continue printing lines until there are no more
-    if line:
-        # If line exits, call print line function
-        print_line(line, encoding, errors)
-        return main(language_file, encoding, errors)
+def secret_formula(started):
+    jelly_beans = started * 500
+    jars = jelly_beans / 1000
+    crates = jars / 100
+    return jelly_beans, jars, crates
 
 
-def print_line(line, encoding, errors):
-    # Strip line of leading/ending whitespace
-    next_lang = line.strip()
-    # Why errors = errors?
-    raw_bytes = next_lang.encode(encoding, errors=errors)
-    cooked_string = raw_bytes.decode(encoding, errors=errors)
+start_point = 1000
+formula = secret_formula(start_point)
+# beans, jars, crates = secret_formula(start_point)
+# print(f"We'd have {beans} beans, {jars} jars, and {crates} crates")
 
-    print(raw_bytes, "<===>", cooked_string)
-
-
-languages = open("sample.txt", encoding="utf-8")
-main(languages, input_encoding, error)
+# Additional way to format a string
+print("With a starting point of: {}".format(start_point))
+print("We'd have {} beans, {} jars, and {} crates".format(*formula))
